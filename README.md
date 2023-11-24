@@ -1,13 +1,8 @@
-# @mojojoejo/vite-plugin-purgecss
+# @vite-plugin-purgecss-v5
 
-[![npm version](https://img.shields.io/npm/v/@mojojoejo/vite-plugin-purgecss)](https://www.npmjs.com/package/@mojojoejo/vite-plugin-purgecss)&nbsp;
-[![GitHub release](https://img.shields.io/github/v/release/mojojoejo/vite-plugin-purgecss)](https://github.com/mojojoejo/vite-plugin-purgecss/releases)&nbsp;
-[![Codacy coverage](https://img.shields.io/codacy/coverage/27dbd0360f4e4bb0a6300cadb5c76448)](https://app.codacy.com/gh/mojojoejo/vite-plugin-purgecss/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)&nbsp;
-[![Codacy grade](https://img.shields.io/codacy/grade/27dbd0360f4e4bb0a6300cadb5c76448)](https://app.codacy.com/gh/mojojoejo/vite-plugin-purgecss/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)&nbsp;
-[![Snyk vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/mojojoejo/vite-plugin-purgecss)](https://snyk.io/test/github/mojojoejo/vite-plugin-purgecss)
-
-[Vite](https://vitejs.dev/) plugin for removing unused CSS from generated
+Updated version of the [vite](https://vitejs.dev/) plugin for removing unused CSS from generated
 bundles using [PurgeCSS](https://purgecss.com/).
+All credits for [Joe Stanley](https://github.com/mojojoejo)
 
 ## 📦 Install
 
@@ -41,11 +36,8 @@ the CSS output of the Vite build.
 import pluginPurgeCss from "@mojojoejo/vite-plugin-purgecss";
 
 export default {
-  plugins: [
-    pluginPurgeCss(),
-  ],
+	plugins: [pluginPurgeCss()],
 };
-
 ```
 
 ### With CSS Variables
@@ -58,13 +50,12 @@ enable the `variables` PurgeCSS option.
 import pluginPurgeCss from "@mojojoejo/vite-plugin-purgecss";
 
 export default {
-  plugins: [
-    pluginPurgeCss({
-      variables: true,
-    }),
-  ],
+	plugins: [
+		pluginPurgeCss({
+			variables: true,
+		}),
+	],
 };
-
 ```
 
 ### With external files
@@ -77,10 +68,7 @@ add CSS content to the output of PurgeCSS.
 
 ```ts
 // content/path/custom-classes.ts
-const customClasses = [
-  "custom-class-01",
-  "custom-class-02",
-];
+const customClasses = ["custom-class-01", "custom-class-02"];
 
 export default customClasses;
 ```
@@ -88,8 +76,8 @@ export default customClasses;
 ```css
 /* css/path/custom-styles.css */
 :root {
-  --custom-property-01: 50% 50%;
-  --custom-property-02: 0 4px 4px rgb(0 0 0 / 0.2);
+	--custom-property-01: 50% 50%;
+	--custom-property-02: 0 4px 4px rgb(0 0 0 / 0.2);
 }
 ```
 
@@ -98,22 +86,21 @@ export default customClasses;
 import pluginPurgeCss from "@mojojoejo/vite-plugin-purgecss";
 
 export default {
-  plugins: [
-    pluginPurgeCss({
-      content: ["content/path/custom-classes.ts"],
-      css: ["css/path/custom-styles.css"],
-      variables: true,
-    }),
-  ],
+	plugins: [
+		pluginPurgeCss({
+			content: ["content/path/custom-classes.ts"],
+			css: ["css/path/custom-styles.css"],
+			variables: true,
+		}),
+	],
 };
-
 ```
 
 ⚠️ **Note**:
 
 - Using the `content` or `css` options circumvents the Vite build process
-(i.e., these values will only be seen by the PurgeCSS process). Do not pass
-files to these options that require processing by Vite.
+  (i.e., these values will only be seen by the PurgeCSS process). Do not pass
+  files to these options that require processing by Vite.
 
 ### With CSS Modules
 
@@ -139,49 +126,51 @@ PurgeCSS.
 type Options = Partial<UserDefinedOptions>;
 
 interface UserDefinedOptions {
-  content: Array<string | RawContent>;
-  css: Array<string | RawCSS>;
-  defaultExtractor?: ExtractorFunction;
-  extractors?: Array<Extractors>;
-  fontFace?: boolean;
-  keyframes?: boolean;
-  output?: string;
-  rejected?: boolean;
-  rejectedCss?: boolean;
-  sourceMap?: boolean | (postcss.SourceMapOptions & {
-      to?: string;
-  });
-  stdin?: boolean;
-  stdout?: boolean;
-  variables?: boolean;
-  safelist?: UserDefinedSafelist;
-  blocklist?: StringRegExpArray;
-  skippedContentGlobs?: Array<string>;
-  dynamicAttributes?: string[];
+	content: Array<string | RawContent>;
+	css: Array<string | RawCSS>;
+	defaultExtractor?: ExtractorFunction;
+	extractors?: Array<Extractors>;
+	fontFace?: boolean;
+	keyframes?: boolean;
+	output?: string;
+	rejected?: boolean;
+	rejectedCss?: boolean;
+	sourceMap?:
+		| boolean
+		| (postcss.SourceMapOptions & {
+				to?: string;
+		  });
+	stdin?: boolean;
+	stdout?: boolean;
+	variables?: boolean;
+	safelist?: UserDefinedSafelist;
+	blocklist?: StringRegExpArray;
+	skippedContentGlobs?: Array<string>;
+	dynamicAttributes?: string[];
 }
 ```
 
 ⚠️ **Note**:
 
 - The `content` and `css` options are not required when using the plugin. All
-chunks and non-CSS assets in the bundle will automatically be added to the
-`content` array as raw values. Likewise, CSS assets will be added to the
-`css` array.
+  chunks and non-CSS assets in the bundle will automatically be added to the
+  `content` array as raw values. Likewise, CSS assets will be added to the
+  `css` array.
 - Custom filenames, globs, and raw values can be passed to the `content` and
-`css` options to include files that are not present in the bundle. These
-arrays will be concatenated with the `content` and `css` arrays retrieved
-from the bundle.
+  `css` options to include files that are not present in the bundle. These
+  arrays will be concatenated with the `content` and `css` arrays retrieved
+  from the bundle.
 
 ## 🤔 Caveats
 
 - The plugin utilizes the [generateBundle](https://rollupjs.org/plugin-development/#generatebundle)
-Rollup build hook, an [output generation hook](https://vitejs.dev/guide/api-plugin.html#universal-hooks)
-that is not called during dev. Therefore, PurgeCSS will not modify CSS assets
-while using Vite's dev server.
+  Rollup build hook, an [output generation hook](https://vitejs.dev/guide/api-plugin.html#universal-hooks)
+  that is not called during dev. Therefore, PurgeCSS will not modify CSS assets
+  while using Vite's dev server.
 - The result of using the plugin mimics that of calling the PurgeCSS CLI with
-the output of a Vite build. The plugin seeks to include this operation within
-the `vite build` command itself. The following commands provide an example of
-how this functionality could be implemented using the PurgeCSS CLI.
+  the output of a Vite build. The plugin seeks to include this operation within
+  the `vite build` command itself. The following commands provide an example of
+  how this functionality could be implemented using the PurgeCSS CLI.
 
   ```sh
   # Using the default output directory: "dist/"
