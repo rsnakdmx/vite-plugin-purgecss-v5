@@ -1,4 +1,4 @@
-# @vite-plugin-purgecss-v5
+# @vite-plugin-purgecss-updated-v5
 
 Updated version of the [vite](https://vitejs.dev/) plugin for removing unused CSS from generated
 bundles using [PurgeCSS](https://purgecss.com/).
@@ -9,19 +9,19 @@ All credits for [Joe Stanley](https://github.com/mojojoejo)
 **Using npm**:
 
 ```sh
-npm install --save-dev vite-plugin-purgecss-v5
+npm install --save-dev vite-plugin-purgecss-updated-v5
 ```
 
 **Using yarn**:
 
 ```sh
-yarn add --dev vite-plugin-purgecss-v5
+yarn add --dev vite-plugin-purgecss-updated-v5
 ```
 
 **Using pnpm**:
 
 ```sh
-pnpm add --save-dev vite-plugin-purgecss-v5
+pnpm add --save-dev vite-plugin-purgecss-updated-v5
 ```
 
 ## 🚀 Usage
@@ -33,7 +33,7 @@ the CSS output of the Vite build.
 
 ```ts
 // vite.config.ts
-import pluginPurgeCss from "vite-plugin-purgecss-v5";
+import pluginPurgeCss from "vite-plugin-purgecss-updated-v5";
 
 export default {
 	plugins: [pluginPurgeCss()],
@@ -47,7 +47,7 @@ enable the `variables` PurgeCSS option.
 
 ```ts
 // vite.config.ts
-import pluginPurgeCss from "vite-plugin-purgecss-v5";
+import pluginPurgeCss from "vite-plugin-purgecss-updated-v5";
 
 export default {
 	plugins: [
@@ -83,7 +83,7 @@ export default customClasses;
 
 ```ts
 // vite.config.ts
-import pluginPurgeCss from "vite-plugin-purgecss-v5";
+import pluginPurgeCss from "vite-plugin-purgecss-updated-v5";
 
 export default {
 	plugins: [
