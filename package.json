@@ -16,7 +16,7 @@
 		"./dist/*"
 	],
 	"scripts": {
-		"prepare": "husky install",
+		"prepare": "husky",
 		"prepublishOnly": "pnpm run build",
 		"build": "tsup",
 		"build:dev": "pnpm run build --watch",
