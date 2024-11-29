@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-purgecss-updated-v5",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"description": "Updated vite plugin for removing unused CSS from generated bundles with PurgeCSS for Vite 5 peerDependencies.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
