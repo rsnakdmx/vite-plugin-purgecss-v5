@@ -64,7 +64,6 @@ function purgeCssPlugin(opts?: Options): Plugin {
 
 			for (const result of results) {
 				// Replace CSS assets with PurgeCSS result.
-				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				outputs[result.file!].source = result.css;
 			}
 		},
