@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import { beforeAll, describe, expect, it } from "vitest";
 import { notFindInCss } from "./util/css";
 import { viteBuildCss } from "./util/vite-build";
-import pluginPurgeCss from "../src";
+import pluginPurgeCss from "../src/";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const root = path.resolve(__dirname, "./fixtures/chaining");
