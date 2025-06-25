@@ -25,7 +25,7 @@
 		"test:coverage": "pnpm run test --coverage",
 		"test:dev": "vitest watch",
 		"test:ui": "vitest --ui",
-		"lint": "eslint . --ext js,ts,cjs,mjs",
+		"lint": "eslint .",
 		"lint:fix": "pnpm run lint --fix",
 		"format": "prettier './**/*.{js,ts,cjs,mjs}'",
 		"format:check": "pnpm run format --check",
