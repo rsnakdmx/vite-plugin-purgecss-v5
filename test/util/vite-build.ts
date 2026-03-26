@@ -25,7 +25,6 @@ export async function viteBuildCss(root: string, plugins: PluginOption[]) {
 				polyfill: false,
 			},
 			rollupOptions: {
-				maxParallelFileOps: 20,
 				output: {
 					entryFileNames: "[name].js",
 					chunkFileNames: "[name].js",

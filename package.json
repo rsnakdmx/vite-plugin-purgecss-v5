@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-purgecss-updated-v5",
-	"version": "1.2.6",
+	"version": "1.2.7",
 	"description": "Updated vite plugin for removing unused CSS from generated bundles with PurgeCSS for Vite 5 peerDependencies.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.js",
@@ -50,34 +50,34 @@
 	},
 	"license": "MIT",
 	"peerDependencies": {
-		"vite": "^3 || ^4 || ^5 || ^6 || ^7"
+		"vite": "^3 || ^4 || ^5 || ^6 || ^7 || ^8"
 	},
 	"devDependencies": {
-		"@eslint/js": "9.29.0",
+		"@eslint/js": "9.39.4",
 		"@semantic-release/git": "^10.0.1",
-		"@types/node": "^24.0.4",
-		"@typescript-eslint/eslint-plugin": "^8.35.0",
-		"@typescript-eslint/parser": "^8.35.0",
-		"@vitest/coverage-v8": "^3.2.4",
-		"@vitest/ui": "^3.2.4",
-		"eslint": "^9.29.0",
-		"eslint-config-prettier": "10.1.5",
+		"@types/node": "^25.5.0",
+		"@typescript-eslint/eslint-plugin": "^8.57.2",
+		"@typescript-eslint/parser": "^8.57.2",
+		"@vitest/coverage-v8": "^4.1.1",
+		"@vitest/ui": "^4.1.1",
+		"eslint": "^9.39.4",
+		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-import": "^2.32.0",
-		"globals": "16.2.0",
+		"globals": "17.4.0",
 		"husky": "^9.1.7",
-		"lint-staged": "^16.1.2",
-		"prettier": "^3.6.1",
+		"lint-staged": "^16.4.0",
+		"prettier": "^3.8.1",
 		"prettier-cli": "^0.1.0",
-		"rollup": "^4.44.0",
-		"semantic-release": "^24.2.5",
-		"tsup": "^8.5.0",
-		"typescript": "^5.8.3",
-		"typescript-eslint": "8.35.0",
-		"vite": "^7.0.0",
-		"vitest": "^3.2.4"
+		"rollup": "^4.60.0",
+		"semantic-release": "^25.0.3",
+		"tsup": "^8.5.1",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "8.57.2",
+		"vite": "^8.0.3",
+		"vitest": "^4.1.1"
 	},
 	"dependencies": {
-		"purgecss": "^7.0.2"
+		"purgecss": "^8.0.0"
 	},
 	"repository": {
 		"type": "git",

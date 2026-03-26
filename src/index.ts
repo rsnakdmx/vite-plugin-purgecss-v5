@@ -1,8 +1,6 @@
 import { extname } from "path";
 import { PurgeCSS } from "purgecss";
-
-import type { OutputAsset } from "rollup";
-import type { Plugin } from "vite";
+import type { Plugin, Rollup } from "vite";
 import type { Options, PurgeCssContent, PurgeCssStyles } from "./types";
 
 // Regular expression for matching files with extensions `.css` and
@@ -35,7 +33,7 @@ function purgeCssPlugin(opts?: Options): Plugin {
 			}
 
 			// Cache of CSS assets that may be transformed.
-			const outputs: Record<string, OutputAsset> = {};
+			const outputs: Record<string, Rollup.OutputAsset> = {};
 
 			for (const id in bundle) {
 				const file = bundle[id];
