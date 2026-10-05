@@ -18,18 +18,18 @@ describe("purgecss font-face", () => {
 	});
 
 	it("keep @font-face 'Cerebri Bold'", () => {
-		expect(output.includes(`src: url("../fonts/CerebriSans-Bold.eot?")`)).toBe(
-			true
+		expect(output).toMatch(
+			/src:\s*url\("\.\.\/fonts\/CerebriSans-Bold\.eot\?"\)/
 		);
 	});
 
 	it("keep @font-face 'Cerebri Sans'", () => {
-		expect(
-			output.includes(`src: url("../fonts/CerebriSans-Regular.eot?")`)
-		).toBe(true);
+		expect(output).toMatch(
+			/src:\s*url\("\.\.\/fonts\/CerebriSans-Regular\.eot\?"\)/
+		);
 	});
 
 	it("remove @font-face 'OtherFont'", () => {
-		expect(output.includes(`src: url("xxx")`)).toBe(false);
+		expect(output).not.toContain("xxx");
 	});
 });

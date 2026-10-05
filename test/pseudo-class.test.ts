@@ -43,12 +43,12 @@ describe("purgecss pseudo classes and selectors", () => {
 		expect(output.includes("another-item:nth-of-type(-n + 6)")).toBe(true);
 	});
 
-	it("removes unused:only-child()", () => {
-		expect(output.includes("unused:only-child()")).toBe(false);
+	it("removes unused:only-child", () => {
+		expect(output.includes("unused:only-child")).toBe(false);
 	});
 
-	it("finds used:only-child()", () => {
-		expect(output.includes("used:only-child()")).toBe(true);
+	it("finds used:only-child", () => {
+		expect(output.includes("used:only-child")).toBe(true);
 	});
 
 	it("finds odd-item:nth-child(odd)", () => {
