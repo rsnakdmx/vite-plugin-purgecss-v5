@@ -13,7 +13,12 @@
 		"module": "ESNext",
 		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
-		"isolatedModules": true
+		"isolatedModules": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"rootDir": "./src",
+		"outDir": "./dist"
 	},
-	"include": ["src"]
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist"]
 }

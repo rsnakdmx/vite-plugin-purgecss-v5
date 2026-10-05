@@ -1,2 +1,1 @@
-# lint and format source code
-pnpm lint-staged --concurrent false
+pnpm exec lint-staged
