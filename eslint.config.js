@@ -1,10 +1,10 @@
 import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import importPlugin from "eslint-plugin-import";
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import eslintConfigPrettier from "eslint-config-prettier";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
+import importPlugin from "eslint-plugin-import";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default [
 	js.configs.recommended,

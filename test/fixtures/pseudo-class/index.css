@@ -46,11 +46,11 @@ div:before {
 	color: brown;
 }
 
-.unused:only-child() {
+.unused:only-child {
 	color: red;
 }
 
-.used:only-child() {
+.used:only-child {
 	color: blue;
 }
 

@@ -1,9 +1,9 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import { beforeAll, describe, expect, it } from "vitest";
+import pluginPurgeCss from "../src";
 import { findInCss } from "./util/css";
 import { viteBuildCss } from "./util/vite-build";
-import pluginPurgeCss from "../src";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const root = path.resolve(__dirname, "./fixtures/comments");

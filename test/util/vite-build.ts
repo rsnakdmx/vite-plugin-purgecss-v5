@@ -1,8 +1,7 @@
-import { build } from "vite";
-import { cssRegExp, sourceString } from "../../src";
-
 import type { OutputAsset, OutputChunk } from "rollup";
 import type { PluginOption } from "vite";
+import { build } from "vite";
+import { cssRegExp, sourceString } from "../../src";
 
 /**
  * Bundle CSS assets for a project with Vite. Output files will not be written

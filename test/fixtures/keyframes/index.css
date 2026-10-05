@@ -104,6 +104,7 @@
 }
 
 .scale-spin {
-	animation: spin 300ms linear infinite forwards,
+	animation:
+		spin 300ms linear infinite forwards,
 		scale 300ms linear infinite alternate;
 }

@@ -1,9 +1,9 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import { beforeAll, describe, it } from "vitest";
+import pluginPurgeCss from "../src";
 import { findInCss, notFindInCss } from "./util/css";
 import { viteBuildCss } from "./util/vite-build";
-import pluginPurgeCss from "../src";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
