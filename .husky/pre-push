@@ -1,2 +1,2 @@
 # test source code
-pnpm run test
+pnpm test
